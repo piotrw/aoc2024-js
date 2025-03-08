@@ -7,6 +7,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "task1": "node day01/task.js"
+    "task1": "node day01/task.js",
+    "task2": "node day02/task.js"
   }
 }
