@@ -5,9 +5,11 @@ https://adventofcode.com/2024/day/1
 import {loadData} from "../lib/input.js";
 import {showHeader, showResults} from "../lib/output.js";
 
-showHeader(2024, 1, 'Historian Hysteria');
+const day = 1;
 
-const data = loadData()
+showHeader(2024, day, 'Historian Hysteria');
+
+const data = loadData(day)
 
 // parse data
 const left = data.map((line) => line.split('   ')[0]);
