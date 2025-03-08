@@ -1,20 +1,15 @@
 /*
 https://adventofcode.com/2024/day/1
  */
-import fs from "fs";
 
-console.log("Day 01 / Task 01\n");
+import {loadData} from "../lib/input.js";
+import {showHeader, showResults} from "../lib/output.js";
 
-const mode = !!process.argv[2] && process.argv[2] === 'input' ? 'input' : 'demo';
-const file = `./day01/${mode}.txt`;
+showHeader(2024, 1, 'Historian Hysteria');
 
-if (!fs.existsSync(file)) {
-    console.error(`File ${file} not exists`);
-    process.exit(1);
-}
+const data = loadData()
 
-const data = fs.readFileSync(file, 'utf-8').trim().split('\r\n');
-
+// parse data
 const left = data.map((line) => line.split('   ')[0]);
 const right = data.map((line) => line.split('   ')[1]);
 
@@ -26,7 +21,6 @@ const task1 = (left, right) => {
 }
 
 const task2 = (left, right) => {
-
     // count values
     let count = new Map();
     right.forEach((value) => {
@@ -43,9 +37,7 @@ const task2 = (left, right) => {
     return sum;
 }
 
-console.log("Result 1: ", task1(left, right));
-console.log("Result 2: ", task2(left, right));
-
-if (mode === 'demo') {
-    console.info("\nDemo mode. Run task with argument input");
-}
+showResults(
+    task1(left, right),
+    task2(left, right)
+);

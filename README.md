@@ -5,7 +5,7 @@ https://adventofcode.com/2024
 
 ---
 
-### Day 1
+### Day 1: Historian Hysteria
 ```bash
   node day01/task.js
 ```
