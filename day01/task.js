@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*
 https://adventofcode.com/2024/day/1
  */
